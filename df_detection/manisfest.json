@@ -1,0 +1,19 @@
+{
+    "manifest_version" : 3,
+    "name": "Alpha",
+    "version" : "1.0",
+    "description" : "Detect deepfakes for you.",
+    "action" :{
+        "default_popup" : "index.html"
+    },
+    "content_scripts": [
+        {
+            "js" : ["src/components/content.tsx"],
+            "matches" : ["<all_urls>"],
+            "run_at" : "document_idle"
+        }
+    ],
+    "host_permissions" : [
+        "<all_urls>"
+    ]
+}
